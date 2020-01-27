@@ -1,0 +1,139 @@
+﻿<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="UTF-8">
+    <meta name="author" content="Alexander Yuryatin" />
+    <meta name="description" content="©Alexander Yuryatin 2019">
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <title>Учебный медицинский портал</title>
+  </head>
+  <body style="color:#424242;">
+    <header>
+      <img class="headermain" src="tevalogo.png" alt="Логотип Teva">
+      <h1 class="headermain">Фармакокинетика метамизола 500 мг</h1>
+    </header>
+
+    <main class="mainmain" style='padding-top: 20px; width:100%; max-width:1400px; margin: 30px; clear: both; display: block;'>
+
+      <div class="time" style="margin-left: 0px; margin-top: -30px;">
+        <div class="pressPopupTablet" style="display: inline-block;"><img onmousedown="reSet()" onmouseup="defaultClock()" class="theTablet" width="95" height="91" src="tablet.png" alt="Таблетка Спазмалгон" style="margin-left: 120px; margin-bottom: -40px;" /><span class="textPopupTablet">Нажми меня, чтобы принять новую первую таблетку метамизола<br/>500 мг</span></div>
+        <span class="myClock" onclick="redClock()" style="margin-left: 230px; font-size: 70px; font-weight: bold;">00:00:00</span><br/><input type="range" min="0" max="43200" step="60" value="0" style="margin-left: 464px; margin-top: -50px;"></div>
+
+      <div class="mma" style="margin-left: 20px; margin-top: 10px;">
+        <span style="font-size: 30px; font-weight: bold; margin-left: 200px; color: #204e77;">Концентрация (мг/л) <div class="metabolites_link" style="display: inline;">метаболитов<img class="metabolites_graph" src="metabolites_graph.png" width="754" height="541" /></div><span style="margin-left: 290px;">Выработка</span><br/><span class="pge2_link" style="margin-left: 950px;">простагландина<span class="pge2_popup">Простагландин E<sub>2</sub> — это один из основных провоспалительных простагландинов. Он синтезируется из простагландина H<sub>2</sub> ферментом простагландин-E<sub>2</sub>-синтазой и из него в свою очередь синтезируется простагландин F<sub>2</sub>. При воспалении простагландин E<sub>2</sub> приводит к расширению кровеносных сосудов, способствует  гипералгезии (повышенной чувствительности к боли) и аллодинии (болезненному восприятию неболевых стимулов: тактильных, тепловых).<br/><img src="pge2.png" style="margin-left: 30px; margin-top: 10px; margin-bottom: 10px;"/></span></span><br/><span style="margin-left: 80px;">в плазме крови</span><span style="margin-left: 140px;">в спинно-мозговой жидкости</span><span style="margin-left: 175px;">E<sub>2</sub></span></span></div>
+
+      <div class="pressPopupMAABlood" style="margin-left: 0px; margin-top: 20px; display: inline-block;">
+        <span class="textPopupMAABlood"><span style="font-size: 120%; font-weight: bold;">MAA</span><br/><span style="font-size: 89%;">(<em>N</em>-метил-4-амино-антипирин)</span><br/>— это один из двух активных метаболитов метамизола. В него напрямую превращается метамизол. Именно концентрация MAA на этой анимации связана математической моделью с подавлением синтеза простагландина E<sub>2</sub>. Модель получена на основании исследования на модели крыс Sprague–Dawley<sup>2</sup></span>
+        <svg width="85" height="510">
+          <text class="maaLevelBlood" x="0" y="40" style="font-size: 44px; fill: #4e9e45;">0.0</text>
+          <text id="maaLabelBlood" x="0" y="490" style="fill: #aa198d; font-size: 37px; font-weight: bold;">MAA</text>
+          <rect id="maaGraphBlood" x="0" y="510" rx="5" ry="5" width="85" height="0" style="fill: #35786e; stroke-width: 0;" ></rect>
+        </svg>
+      </div>
+
+      <div class="pressPopupAABlood" style="margin-left: 30px; margin-top: 20px; display: inline-block;">
+        <span class="textPopupAABlood"><span style="font-size: 120%; font-weight: bold;">AA</span><br/><span style="font-size: 89%;">(амино-антипирин)</span><br/>— это один из двух активных метаболитов метамизола. В него превращается другой активный метаболит MAA (<em>N</em>-метил-4-амино-антипирин).</span>
+        <svg width="85" height="510">
+          <text class="aaLevelBlood" x="0" y="40" style="font-size: 44px; fill: #4e9e45;">0.0</text>
+          <text id="aaLabelBlood" x="17" y="490" style="fill: #aa198d; font-size: 37px; font-weight: bold;">AA</text>
+          <rect id="aaGraphBlood" x="0" y="510" rx="5" ry="5" width="85" height="0" style="fill: #9fd142; stroke-width: 0;" ></rect>
+        </svg>
+      </div>
+
+      <div class="pressPopupAAABlood" style="margin-left: 30px; margin-top: 20px; display: inline-block;">
+        <span class="textPopupAAABlood"><span style="font-size: 120%; font-weight: bold;">AAA</span><br/><span style="font-size: 89%;">(<em>N</em>-ацетил-4-амино-антипирин)</span><br/>— это один из двух неактивных метаболитов метамизола. В него превращается активный метаболил AA (амино-антипирин).</span>
+        <svg width="85" height="510">
+          <text class="aaaLevelBlood" x="0" y="40" style="font-size: 44px; fill: #4e9e45;">0.0</text>
+          <text id="aaaLabelBlood" x="0" y="490" style="fill: #aa198d; font-size: 37px; font-weight: bold;">AAA</text>
+          <rect id="aaaGraphBlood" x="0" y="510" rx="5" ry="5" width="85" height="0" style="fill: #424242; stroke-width: 0;" ></rect>
+        </svg>
+      </div>
+
+      <div class="pressPopupFAABlood" style="margin-left: 30px; margin-top: 20px; display: inline-block;">
+        <span class="textPopupFAABlood"><span style="font-size: 120%; font-weight: bold;">FAA</span><br/><span style="font-size: 89%;">(<em>N</em>-формил-4-амино-антипирин)</span><br/>— это один из двух неактивных метаболитов метамизола. В него превращается активный метаболил MAA (<em>N</em>-метил-4-амино-антипирин).</span>
+        <svg width="85" height="510">
+          <text class="faaLevelBlood" x="0" y="40" style="font-size: 44px; fill: #4e9e45;">0.0</text>
+          <text id="faaLabelBlood" x="0" y="490" style="fill: #aa198d; font-size: 37px; font-weight: bold;">FAA</text>
+          <rect id="faaGraphBlood" x="0" y="510" rx="5" ry="5" width="85" height="0" style="fill: #424242; stroke-width: 0;" ></rect>
+        </svg>
+      </div>
+
+      <div class="pressPopupMAACsf" style="margin-left: 30px; margin-top: 20px; display: inline-block;">
+        <span class="textPopupMAACsf"><span style="font-size: 120%; font-weight: bold;">MAA</span><br/><span style="font-size: 89%;">(<em>N</em>-метил-4-амино-антипирин)</span><br/>— это один из двух активных метаболитов метамизола. В него напрямую превращается метамизол. Именно концентрация MAA на этой анимации связана математической моделью с подавлением синтеза простагландина E<sub>2</sub>. Модель получена на основании исследования на модели крыс Sprague–Dawley<sup>2</sup></span>
+        <svg width="85" height="510">
+          <text class="maaLevelCsf" x="0" y="40" style="font-size: 44px; fill: #4e9e45;">0.0</text>
+          <text id="maaLabelCsf" x="0" y="490" style="fill: #aa198d; font-size: 37px; font-weight: bold;">MAA</text>
+          <rect id="maaGraphCsf" x="0" y="510" rx="5" ry="5" width="85" height="0" style="fill: #35786e; stroke-width: 0;" ></rect>
+        </svg>
+      </div>
+
+      <div class="pressPopupAACsf" style="margin-left: 30px; margin-top: 20px; display: inline-block;">
+        <span class="textPopupAACsf"><span style="font-size: 120%; font-weight: bold;">AA</span><br/><span style="font-size: 89%;">(амино-антипирин)</span><br/>— это один из двух активных метаболитов метамизола. В него превращается другой активный метаболит MAA (<em>N</em>-метил-4-амино-антипирин).</span>
+        <svg width="85" height="510">
+          <text class="aaLevelCsf" x="0" y="40" style="font-size: 44px; fill: #4e9e45;">0.0</text>
+          <text id="aaLabelCsf" x="17" y="490" style="fill: #aa198d; font-size: 37px; font-weight: bold;">AA</text>
+          <rect id="aaGraphCsf" x="0" y="510" rx="5" ry="5" width="85" height="0" style="fill: #9fd142; stroke-width: 0;" ></rect>
+        </svg>
+      </div>
+
+      <div class="pressPopupAAACsf" style="margin-left: 30px; margin-top: 20px; display: inline-block;">
+        <span class="textPopupAAACsf"><span style="font-size: 120%; font-weight: bold;">AAA</span><br/><span style="font-size: 89%;">(<em>N</em>-ацетил-4-амино-антипирин)</span><br/>— это один из двух неактивных метаболитов метамизола. В него превращается активный метаболил AA (амино-антипирин).</span>
+        <svg width="85" height="510">
+          <text class="aaaLevelCsf" x="0" y="40" style="font-size: 44px; fill: #4e9e45;">0.0</text>
+          <text id="aaaLabelCsf" x="0" y="490" style="fill: #aa198d; font-size: 37px; font-weight: bold;">AAA</text>
+          <rect id="aaaGraphCsf" x="0" y="510" rx="5" ry="5" width="85" height="0" style="fill: #424242; stroke-width: 0;" ></rect>
+        </svg>
+      </div>
+
+      <div class="pressPopupFAACsf" style="margin-left: 30px; margin-top: 20px; display: inline-block;">
+        <span class="textPopupFAACsf"><span style="font-size: 120%; font-weight: bold;">FAA</span><br/><span style="font-size: 89%;">(<em>N</em>-формил-4-амино-антипирин)</span><br/>— это один из двух неактивных метаболитов метамизола. В него превращается активный метаболил MAA (<em>N</em>-метил-4-амино-антипирин).</span>
+        <svg width="85" height="510">
+          <text class="faaLevelCsf" x="0" y="40" style="font-size: 44px; fill: #4e9e45;">0.0</text>
+          <text id="faaLabelCsf" x="0" y="490" style="fill: #aa198d; font-size: 37px; font-weight: bold;">FAA</text>
+          <rect id="faaGraphCsf" x="0" y="510" rx="5" ry="5" width="85" height="0" style="fill: #424242; stroke-width: 0;" ></rect>
+        </svg>
+      </div>
+
+      <div class="pressPopupPGEBlood" style="margin-left: 70px; margin-top: 20px; display: inline-block;">
+        <span class="textPopupPGEBlood">Выработка простагландина E<sub>2</sub> в компартментах организма связанных с плазмой крови, в т.ч. в межклеточной жидкости основных тканей, в сравнении с контрольной группой. Математической моделью связана с концетрацией метаболита MAA слева и получена на основании исследования на модели крыс Sprague–Dawley<sup>2</sup></span>
+        <svg width="85" height="510">
+          <text class="pgeLevelBlood" x="0" y="31" style="font-size: 33px; fill: #fb3449; font-weight: bold;">100%</text>
+          <text id="pgeLabelBlood" x="0" y="110" style="fill: #aa198d; font-size: 32px; font-weight: bold;">PGE2</text>
+          <text id="pgeSubLabelBlood" x="11" y="123" style="fill: #aa198d; font-size: 12px; font-weight: bold;">от плазмы</text>
+          <rect id="pgeGraphBlood" x="0" y="133" rx="5" ry="5" width="85" height="380" style="fill: #fb3449; stroke-width: 0;" ></rect>
+        </svg>
+      </div>
+
+      <div class="pressPopupPGECsf" style="margin-left: 30px; margin-top: 20px; display: inline-block;">
+        <span class="textPopupPGECsf">Выработка простагландина E<sub>2</sub> в спинномозговой жидкости, в сравнении с контрольной группой. Математической моделью связана с концетрацией метаболита MAA слева и получена на основании исследования на модели крыс Sprague–Dawley<sup>2</sup></span>
+        <svg width="85" height="510">
+          <text class="pgeLevelCsf" x="0" y="31" style="font-size: 33px; fill: #204e77; font-weight: bold;">100%</text>
+          <text id="pgeLabelCsf" x="0" y="110" style="fill: #aa198d; font-size: 32px; font-weight: bold;">PGE2</text>
+          <text id="pgeSubLabelCsf" x="20" y="123" style="fill: #aa198d; font-size: 12px; font-weight: bold;">в СМЖ</text>
+          <rect id="pgeGraphCsf" x="0" y="133" rx="5" ry="5" width="85" height="380" style="fill: #204e77; stroke-width: 0;" ></rect>
+        </svg>
+      </div>
+
+      <div style="width:1100px">
+        <br/><br/>
+        <ol style="font-size: 90%;">
+          <li>Cohen O, Zylber-Katz E, Caraco Y, <i>et al</i>. Cerebrospinal fluid and plasma concentrations of <span class="nsaid_popup1">dipyrone<span class="nsaid1">Дипирон — это синоним метамизола, распространенный в Великобритании и США</span></span> metabolites after a single oral dose of <span class="nsaid_popup2">dipyrone<span class="nsaid2">Дипирон — это синоним метамизола, распространенный в Великобритании и США</span></span>. <i>Eur J Clin Pharmacol</i>. 1998;54(7):549–53. <a href="https://translate.google.com/translate?sl=en&tl=ru&u=https%3A%2F%2Fwww.ncbi.nlm.nih.gov%2Fpubmed%2F%3Fterm%3D9832297" target="_blank">Автоперевод абстракта статьи на русский</a></li>
+          <li>Pierre SC, Schmidt R, Brenneis C, <i>et al</i>. Inhibition of cyclooxygenases by <span class="nsaid_popup3">dipyrone<span class="nsaid3">Дипирон — это синоним метамизола, распространенный в Великобритании и США</span></span>. <i>Br J Pharmacol</i>. 2007;151(4):494–503. <a href="https://translate.google.com/translate?sl=en&tl=ru&u=https%3A%2F%2Fwww.ncbi.nlm.nih.gov%2Fpubmed%2F17435797" target="_blank">Автоперевод абстракта статьи на русский</a></li>
+        </ol>
+      </div>
+
+    </main>
+
+    <footer>
+      <a class="copyright">©Alexander Yuryatin 2019</a>
+      <a class="copyright" style="margin-left: 205px;">Конфиденциально</a>
+      <a class="copyright" style="margin-left: 180px;">Только для внутреннего использования</a>
+    </footer>
+
+    <script>
+      let string = "Y29uc3QgXzB4MWFjNz1bJ3pzdmlpJywncG93JywnLnByZXNzUG9wdXBQR0VCbG9vZCcsJy5teUNsb2NrJywnLmFhTGV2ZWxDc2YnLCdhZGRFdmVudExpc3RlbmVyJywncXVlcnlTZWxlY3RvcicsJy5uc2FpZDMnLCcjZmFhR3JhcGhCbG9vZCcsJ3N0eWxlJywnY29sb3InLCcucHJlc3NQb3B1cEZBQUNzZicsJyNhYWFHcmFwaEJsb29kJywnLm5zYWlkX3BvcHVwMicsJ3NldEF0dHJpYnV0ZScsJ2hlaWdodCcsJyNmYWFMYWJlbENzZicsJyNtYWFMYWJlbEJsb29kJywnI2FhYUdyYXBoQ3NmJywnI2FhR3JhcGhDc2YnLCd0b3VjaGVuZCcsJyNtYWFMYWJlbENzZicsJ3ByZXZlbnREZWZhdWx0JywnLnByZXNzUG9wdXBNQUFCbG9vZCcsJ3ZhbHVlJywnLnByZXNzUG9wdXBBQUJsb29kJywnLnRleHRQb3B1cEZBQUJsb29kJywnI3BnZVN1YkxhYmVsQmxvb2QnLCcudGV4dFBvcHVwTUFBQ3NmJywnI2ZhYUdyYXBoQ3NmJywnI3BnZUdyYXBoQ3NmJywndG9GaXhlZCcsJy50ZXh0UG9wdXBBQUFDc2YnLCcucHJlc3NQb3B1cEZBQUJsb29kJywnaW5uZXJUZXh0JywnLnRleHRQb3B1cE1BQUJsb29kJywnLmFhTGV2ZWxCbG9vZCcsJ3RleHRDb250ZW50JywnLnByZXNzUG9wdXBBQUNzZicsJ2xvZycsJyNwZ2VHcmFwaEJsb29kJywnI2ZhYUxhYmVsQmxvb2QnLCcuZmFhTGV2ZWxDc2YnLCcucGdlTGV2ZWxCbG9vZCcsJyNtYWFHcmFwaENzZicsJy5wZ2VMZXZlbENzZicsJ3Zpc2libGUnLCcubWV0YWJvbGl0ZXNfZ3JhcGgnLCdoaWRkZW4nLCcubnNhaWRfcG9wdXAxJywnI2ZiMzQ0OScsJy5tYWFMZXZlbENzZicsJy5wcmVzc1BvcHVwUEdFQ3NmJywnZmxvb3InLCdET01Db250ZW50TG9hZGVkJywnLnRleHRQb3B1cEFBQmxvb2QnLCcucGdlMl9saW5rJywnLm5zYWlkMScsJy5wcmVzc1BvcHVwQUFBQmxvb2QnLCcudGV4dFBvcHVwQUFDc2YnLCcjYWFMYWJlbENzZicsJy5tZXRhYm9saXRlc19saW5rJywnZXhwJywnLnRleHRQb3B1cFBHRUJsb29kJywnI2FhTGFiZWxCbG9vZCcsJ3NsaWNlJywnLm1hYUxldmVsQmxvb2QnLCcjYWFhTGFiZWxDc2YnLCdpbnB1dCcsJyNwZ2VTdWJMYWJlbENzZicsJyNwZ2VMYWJlbENzZicsJy50ZXh0UG9wdXBQR0VDc2YnLCcubnNhaWQyJywndmlzaWJpbGl0eScsJy5wcmVzc1BvcHVwQUFBQ3NmJywnI2FhR3JhcGhCbG9vZCddOyhmdW5jdGlvbihfMHg0OWMyNzgsXzB4MWZlMTFlKXtjb25zdCBfMHg1MzY1YjE9ZnVuY3Rpb24oXzB4MjQ1ZjM5KXt3aGlsZSgtLV8weDI0NWYzOSl7XzB4NDljMjc4WydwdXNoJ10oXzB4NDljMjc4WydzaGlmdCddKCkpO319O18weDUzNjViMSgrK18weDFmZTExZSk7fShfMHgxYWM3LDB4MWIyKSk7Y29uc3QgXzB4NGZkZD1mdW5jdGlvbihfMHg0OWMyNzgsXzB4MWZlMTFlKXtfMHg0OWMyNzg9XzB4NDljMjc4LTB4MDtsZXQgXzB4NTM2NWIxPV8weDFhYzdbXzB4NDljMjc4XTtyZXR1cm4gXzB4NTM2NWIxO307ZnVuY3Rpb24gc3RhcnR1cCgpe2xldCBfMHgzMTFmYjc9W18weDRmZGQoJzB4MmQnKSxfMHg0ZmRkKCcweDJmJyksXzB4NGZkZCgnMHg0JyksXzB4NGZkZCgnMHgzNycpLCcucHJlc3NQb3B1cE1BQUNzZicsXzB4NGZkZCgnMHgzYycpLF8weDRmZGQoJzB4MTQnKSxfMHg0ZmRkKCcweDIxJyksXzB4NGZkZCgnMHgxOCcpLF8weDRmZGQoJzB4NGEnKSxfMHg0ZmRkKCcweDInKSxfMHg0ZmRkKCcweDcnKSxfMHg0ZmRkKCcweDQ3JyksXzB4NGZkZCgnMHgyMycpLCcubnNhaWRfcG9wdXAzJ107bGV0IF8weDc2YWY4PVtfMHg0ZmRkKCcweDM5JyksXzB4NGZkZCgnMHgxJyksJy50ZXh0UG9wdXBBQUFCbG9vZCcsXzB4NGZkZCgnMHgzMCcpLF8weDRmZGQoJzB4MzInKSxfMHg0ZmRkKCcweDUnKSxfMHg0ZmRkKCcweDM2JyksJy50ZXh0UG9wdXBGQUFDc2YnLF8weDRmZGQoJzB4OScpLF8weDRmZGQoJzB4MTEnKSwnLnBnZTJfcG9wdXAnLF8weDRmZGQoJzB4NDUnKSxfMHg0ZmRkKCcweDMnKSxfMHg0ZmRkKCcweDEyJyksXzB4NGZkZCgnMHgxZCcpXTtmb3IobGV0IF8weGVhZmNkNz0weDA7XzB4ZWFmY2Q3PDB4ZjtfMHhlYWZjZDcrKyl7bGV0IF8weDRhZDcwMD1kb2N1bWVudFtfMHg0ZmRkKCcweDFjJyldKF8weDMxMWZiN1tfMHhlYWZjZDddKTtfMHg0YWQ3MDBbXzB4NGZkZCgnMHgxYicpXSgndG91Y2hzdGFydCcsZnVuY3Rpb24oXzB4MzkyMzgzKXtfMHgzOTIzODNbXzB4NGZkZCgnMHgyYycpXSgpO18weDRhZDcwMFtfMHg0ZmRkKCcweDFjJyldKF8weDc2YWY4W18weGVhZmNkN10pW18weDRmZGQoJzB4MWYnKV1bXzB4NGZkZCgnMHgxMycpXT1fMHg0ZmRkKCcweDQ0Jyk7fSwhW10pO18weDRhZDcwMFtfMHg0ZmRkKCcweDFiJyldKF8weDRmZGQoJzB4MmEnKSxmdW5jdGlvbihfMHgyNWQ1YmIpe18weDI1ZDViYltfMHg0ZmRkKCcweDJjJyldKCk7XzB4NGFkNzAwW18weDRmZGQoJzB4MWMnKV0oXzB4NzZhZjhbXzB4ZWFmY2Q3XSlbXzB4NGZkZCgnMHgxZicpXVtfMHg0ZmRkKCcweDEzJyldPV8weDRmZGQoJzB4NDYnKTt9LCFbXSk7fX1kb2N1bWVudFtfMHg0ZmRkKCcweDFiJyldKF8weDRmZGQoJzB4MCcpLHN0YXJ0dXApO2xldCBjb3VudGVyPTB4MDtmdW5jdGlvbiByZVNldCgpe2NvdW50ZXI9MHgwO2RvY3VtZW50W18weDRmZGQoJzB4MWMnKV0oXzB4NGZkZCgnMHhlJykpWyd2YWx1ZSddPTB4MDtyZWRDbG9jaygpO31sZXQgeD0weDA7bGV0IG15Q2xvY2s9ZG9jdW1lbnRbXzB4NGZkZCgnMHgxYycpXShfMHg0ZmRkKCcweDE5JykpO2Z1bmN0aW9uIHJlZENsb2NrKCl7bXlDbG9ja1tfMHg0ZmRkKCcweDFmJyldW18weDRmZGQoJzB4MjAnKV09XzB4NGZkZCgnMHg0OCcpO31mdW5jdGlvbiBkZWZhdWx0Q2xvY2soKXtteUNsb2NrWydzdHlsZSddW18weDRmZGQoJzB4MjAnKV09JyM0MjQyNDInO31mdW5jdGlvbiBsZXZlbFRvUEdFKF8weDI4ZjI3ZCl7bGV0IF8weDI3MjY2Mz1NYXRoW18weDRmZGQoJzB4M2QnKV0oXzB4MjhmMjdkKTthbHBoYT1bMHg2NCwxMDEuMTAzOTIyNyw1OS45NjM0MTMzNSw4Ny4zMDg3NjY2Myw4OS44Njc3MzU2NCw4NS42NjA0NzAxNiw1MC40MTQxNzA4XTtiZXRhPVs1OTguMzMzODcwMjk5NjI3LC0zLjEwNjY3NDY3MywtMjEuNjQwNDI1NjEsLTMuNzI4MDA5NjA3LC0zNC42MjQ2ODA5OCwtMjkuMjAyNzQxOTIsLTE0LjQyNjk1MDQxXTtpZihfMHgyOGYyN2Q8MC4wMjE3Mjcpe3JldHVybiBhbHBoYVsweDBdK2JldGFbMHgwXSpfMHgyOGYyN2Q7fWVsc2UgaWYoXzB4MjhmMjdkPDAuMTA4NjM1KXtyZXR1cm4gYWxwaGFbMHgxXStiZXRhWzB4MV0qXzB4MjcyNjYzO31lbHNlIGlmKF8weDI4ZjI3ZDwwLjIxNzI3KXtpZihfMHg0ZmRkKCcweDE2JykhPT0nenN2aWknKXtjb3VudGVyKys7fWVsc2V7cmV0dXJuIGFscGhhWzB4Ml0rYmV0YVsweDJdKl8weDI3MjY2Mzt9fWVsc2UgaWYoXzB4MjhmMjdkPDEuMDg2MzUpe3JldHVybiBhbHBoYVsweDNdK2JldGFbMHgzXSpfMHgyNzI2NjM7fWVsc2UgaWYoXzB4MjhmMjdkPDIuMTcyNyl7cmV0dXJuIGFscGhhWzB4NF0rYmV0YVsweDRdKl8weDI3MjY2Mzt9ZWxzZSBpZihfMHgyOGYyN2Q8MTAuODYzNSl7cmV0dXJuIGFscGhhWzB4NV0rYmV0YVsweDVdKl8weDI3MjY2Mzt9ZWxzZSBpZihfMHgyOGYyN2Q8MjEuNzI3KXtyZXR1cm4gYWxwaGFbMHg2XStiZXRhWzB4Nl0qXzB4MjcyNjYzO31lbHNle3JldHVybiBudWxsO319bGV0IG1hYUxldmVsQ3NmPWRvY3VtZW50WydxdWVyeVNlbGVjdG9yJ10oXzB4NGZkZCgnMHg0OScpKTtsZXQgbWFhR3JhcGhDc2Y9ZG9jdW1lbnRbXzB4NGZkZCgnMHgxYycpXShfMHg0ZmRkKCcweDQyJykpO2xldCBtYWFMYWJlbENzZj1kb2N1bWVudFtfMHg0ZmRkKCcweDFjJyldKF8weDRmZGQoJzB4MmInKSk7bGV0IG1hYUxldmVsQmxvb2Q9ZG9jdW1lbnRbXzB4NGZkZCgnMHgxYycpXShfMHg0ZmRkKCcweGMnKSk7bGV0IG1hYUdyYXBoQmxvb2Q9ZG9jdW1lbnRbXzB4NGZkZCgnMHgxYycpXSgnI21hYUdyYXBoQmxvb2QnKTtsZXQgbWFhTGFiZWxCbG9vZD1kb2N1bWVudFtfMHg0ZmRkKCcweDFjJyldKF8weDRmZGQoJzB4MjcnKSk7bGV0IGFhTGV2ZWxDc2Y9ZG9jdW1lbnRbJ3F1ZXJ5U2VsZWN0b3InXShfMHg0ZmRkKCcweDFhJykpO2xldCBhYUdyYXBoQ3NmPWRvY3VtZW50W18weDRmZGQoJzB4MWMnKV0oXzB4NGZkZCgnMHgyOScpKTtsZXQgYWFMYWJlbENzZj1kb2N1bWVudFtfMHg0ZmRkKCcweDFjJyldKF8weDRmZGQoJzB4NicpKTtsZXQgYWFMZXZlbEJsb29kPWRvY3VtZW50W18weDRmZGQoJzB4MWMnKV0oXzB4NGZkZCgnMHgzYScpKTtsZXQgYWFHcmFwaEJsb29kPWRvY3VtZW50W18weDRmZGQoJzB4MWMnKV0oXzB4NGZkZCgnMHgxNScpKTtsZXQgYWFMYWJlbEJsb29kPWRvY3VtZW50WydxdWVyeVNlbGVjdG9yJ10oXzB4NGZkZCgnMHhhJykpO2xldCBhYWFMZXZlbENzZj1kb2N1bWVudFtfMHg0ZmRkKCcweDFjJyldKCcuYWFhTGV2ZWxDc2YnKTtsZXQgYWFhR3JhcGhDc2Y9ZG9jdW1lbnRbXzB4NGZkZCgnMHgxYycpXShfMHg0ZmRkKCcweDI4JykpO2xldCBhYWFMYWJlbENzZj1kb2N1bWVudFtfMHg0ZmRkKCcweDFjJyldKF8weDRmZGQoJzB4ZCcpKTtsZXQgYWFhTGV2ZWxCbG9vZD1kb2N1bWVudFtfMHg0ZmRkKCcweDFjJyldKCcuYWFhTGV2ZWxCbG9vZCcpO2xldCBhYWFHcmFwaEJsb29kPWRvY3VtZW50W18weDRmZGQoJzB4MWMnKV0oXzB4NGZkZCgnMHgyMicpKTtsZXQgYWFhTGFiZWxCbG9vZD1kb2N1bWVudFtfMHg0ZmRkKCcweDFjJyldKCcjYWFhTGFiZWxCbG9vZCcpO2xldCBmYWFMZXZlbENzZj1kb2N1bWVudFtfMHg0ZmRkKCcweDFjJyldKF8weDRmZGQoJzB4NDAnKSk7bGV0IGZhYUdyYXBoQ3NmPWRvY3VtZW50W18weDRmZGQoJzB4MWMnKV0oXzB4NGZkZCgnMHgzMycpKTtsZXQgZmFhTGFiZWxDc2Y9ZG9jdW1lbnRbXzB4NGZkZCgnMHgxYycpXShfMHg0ZmRkKCcweDI2JykpO2xldCBmYWFMZXZlbEJsb29kPWRvY3VtZW50W18weDRmZGQoJzB4MWMnKV0oJy5mYWFMZXZlbEJsb29kJyk7bGV0IGZhYUdyYXBoQmxvb2Q9ZG9jdW1lbnRbXzB4NGZkZCgnMHgxYycpXShfMHg0ZmRkKCcweDFlJykpO2xldCBmYWFMYWJlbEJsb29kPWRvY3VtZW50W18weDRmZGQoJzB4MWMnKV0oXzB4NGZkZCgnMHgzZicpKTtsZXQgcGdlTGV2ZWxCbG9vZD1kb2N1bWVudFtfMHg0ZmRkKCcweDFjJyldKF8weDRmZGQoJzB4NDEnKSk7bGV0IHBnZUdyYXBoQmxvb2Q9ZG9jdW1lbnRbXzB4NGZkZCgnMHgxYycpXShfMHg0ZmRkKCcweDNlJykpO2xldCBwZ2VMYWJlbEJsb29kPWRvY3VtZW50WydxdWVyeVNlbGVjdG9yJ10oJyNwZ2VMYWJlbEJsb29kJyk7bGV0IHBnZVN1YkxhYmVsQmxvb2Q9ZG9jdW1lbnRbXzB4NGZkZCgnMHgxYycpXShfMHg0ZmRkKCcweDMxJykpO2xldCBwZ2VMZXZlbENzZj1kb2N1bWVudFsncXVlcnlTZWxlY3RvciddKF8weDRmZGQoJzB4NDMnKSk7bGV0IHBnZUdyYXBoQ3NmPWRvY3VtZW50W18weDRmZGQoJzB4MWMnKV0oXzB4NGZkZCgnMHgzNCcpKTtsZXQgcGdlTGFiZWxDc2Y9ZG9jdW1lbnRbXzB4NGZkZCgnMHgxYycpXShfMHg0ZmRkKCcweDEwJykpO2xldCBwZ2VTdWJMYWJlbENzZj1kb2N1bWVudFsncXVlcnlTZWxlY3RvciddKF8weDRmZGQoJzB4ZicpKTtmdW5jdGlvbiB1cGRhdGVUaW1lKCl7aWYoY291bnRlcjwweGMqMHhlMTApe2NvdW50ZXIrKzt9bGV0IF8weDZiZjRjYj1kb2N1bWVudFtfMHg0ZmRkKCcweDFjJyldKF8weDRmZGQoJzB4ZScpKTtpZihfMHg2YmY0Y2JbXzB4NGZkZCgnMHgyZScpXTw9Y291bnRlciYmXzB4NmJmNGNiW18weDRmZGQoJzB4MmUnKV0+Y291bnRlci0weDNjKXt9ZWxzZSBpZihfMHg2YmY0Y2JbXzB4NGZkZCgnMHgyZScpXT09Y291bnRlci0weDNjKXtfMHg2YmY0Y2JbXzB4NGZkZCgnMHgyZScpXT1jb3VudGVyO31lbHNle2NvdW50ZXI9XzB4NmJmNGNiW18weDRmZGQoJzB4MmUnKV07fW15Q2xvY2tbXzB4NGZkZCgnMHgzOCcpXT0oJzAnK01hdGhbXzB4NGZkZCgnMHg0YicpXShjb3VudGVyLzB4ZTEwKSlbJ3NsaWNlJ10oLTB4MikrJzonKygnMCcrTWF0aFsnZmxvb3InXShjb3VudGVyLzB4M2MpJTB4M2MpW18weDRmZGQoJzB4YicpXSgtMHgyKSsnOicrKCcwJytjb3VudGVyJTB4M2MpW18weDRmZGQoJzB4YicpXSgtMHgyKTt4PWNvdW50ZXIvMHhlMTA7bGV0IF8weDRjOGU1ZD1NYXRoW18weDRmZGQoJzB4OCcpXSgxLjMzODkzMDk2MzQwNzMyKzIuMDkzMzA1ODk4OTY5MjIqTWF0aFsnbG9nJ10oeCktMy40NjIxOTg2MTE1NTY3MypNYXRoW18weDRmZGQoJzB4MTcnKV0oTWF0aFtfMHg0ZmRkKCcweDNkJyldKHgpLDB4MikrMi4xODE3MDU3NjY0NjE5NSpNYXRoW18weDRmZGQoJzB4MTcnKV0oTWF0aFtfMHg0ZmRkKCcweDNkJyldKHgpLDB4MyktMC40OTgwMTI0ODM2OTc2NzEqTWF0aFtfMHg0ZmRkKCcweDE3JyldKE1hdGhbJ2xvZyddKHgpLDB4NCkpO2xldCBfMHgxMjQzZDg9TWF0aFtfMHg0ZmRkKCcweDgnKV0oMi4yMTEzNzk1NDY3NzIxMyswLjk3MDg4ODgwNDI5OTcyNCpNYXRoW18weDRmZGQoJzB4M2QnKV0oeCktMC42NDEyODU5MjczOTM2MzYqTWF0aFtfMHg0ZmRkKCcweDE3JyldKE1hdGhbXzB4NGZkZCgnMHgzZCcpXSh4KSwweDIpKTtsZXQgXzB4MTA2YTQ3PWNvdW50ZXI+MC4yNSoweGUxMD9NYXRoW18weDRmZGQoJzB4OCcpXSgtMS44NTM4MzkwNzI5MjkwNisyLjEyNTUwMTI0NDExOTM4Kk1hdGhbXzB4NGZkZCgnMHgzZCcpXSh4KS0wLjIwNjQ2MjAxMDA3ODQ5Kk1hdGhbJ3BvdyddKE1hdGhbJ2xvZyddKHgpLDB4MykpOjB4MDtsZXQgXzB4MWMyZGNlPU1hdGhbJ2V4cCddKC0wLjE5ODE3MDk4OTY4NjYxMSsxLjkzMTY2MTY5OTQ5NzM4Kk1hdGhbXzB4NGZkZCgnMHgzZCcpXSh4KS0wLjYwOTc3NjE4NzYwNTM2NSpNYXRoW18weDRmZGQoJzB4MTcnKV0oTWF0aFtfMHg0ZmRkKCcweDNkJyldKHgpLDB4MikpO2xldCBfMHgxN2E5OGM9TWF0aFtfMHg0ZmRkKCcweDgnKV0oLTIuNTg0NTM5OTY5Nzg1MDkrMC43OTQ4MjgxNTkwMzc1NypNYXRoW18weDRmZGQoJzB4MTcnKV0oTWF0aFtfMHg0ZmRkKCcweDNkJyldKHgpLDB4MyktMC4yNDIzNTkwMDAyMjMxMDcqTWF0aFtfMHg0ZmRkKCcweDE3JyldKE1hdGhbXzB4NGZkZCgnMHgzZCcpXSh4KSwweDQpKTtsZXQgXzB4MmVlNDA5PWNvdW50ZXI+MC4yKjB4ZTEwP01hdGhbXzB4NGZkZCgnMHg4JyldKC0xLjA4NjU2ODc5NTMwMDk5LTIuMTc1Mjc4MTA0NTc2NjIqTWF0aFtfMHg0ZmRkKCcweDE3JyldKE1hdGhbXzB4NGZkZCgnMHgzZCcpXSh4KSwweDIpKzEuNzI2MDM2NzA4OTI1NDUqTWF0aFtfMHg0ZmRkKCcweDE3JyldKE1hdGhbXzB4NGZkZCgnMHgzZCcpXSh4KSwweDMpLTAuMTE1NDk1ODI4ODk0MzMqTWF0aFtfMHg0ZmRkKCcweDE3JyldKE1hdGhbXzB4NGZkZCgnMHgzZCcpXSh4KSwweDUpKToweDA7bGV0IF8weGNiYjA3Nj1NYXRoW18weDRmZGQoJzB4OCcpXSgtMC4xMTg3ODg1NTA3NDg2NjYtNC42MTAyNjgwNTQxMTczNypNYXRoW18weDRmZGQoJzB4MTcnKV0oTWF0aFsnbG9nJ10oeCksMHg0KSs4LjA3MjE2MjkyNTU3OTg0Kk1hdGhbXzB4NGZkZCgnMHgxNycpXShNYXRoW18weDRmZGQoJzB4M2QnKV0oeCksMHg1KS00LjQ3NjAzNTE1MTcyMzYqTWF0aFsncG93J10oTWF0aFtfMHg0ZmRkKCcweDNkJyldKHgpLDB4NikrMC43OTQ5MzkwNTY0MjQ1MjcqTWF0aFsncG93J10oTWF0aFtfMHg0ZmRkKCcweDNkJyldKHgpLDB4NykpO2xldCBfMHgzNjc1ZmE9Y291bnRlcj4wLjIqMHhlMTA/TWF0aFtfMHg0ZmRkKCcweDgnKV0oMC4xMTUwMDc3MDEzNDIzMDQtMy44Nzk3Nzk3MzM5MzQ3NCpNYXRoW18weDRmZGQoJzB4MTcnKV0oTWF0aFtfMHg0ZmRkKCcweDNkJyldKHgpLDB4MikrNC4zNTAwOTgyMTE5MzcyMipNYXRoW18weDRmZGQoJzB4MTcnKV0oTWF0aFtfMHg0ZmRkKCcweDNkJyldKHgpLDB4MyktMS4xNDQ4MTQ5NjU3MzExNipNYXRoWydwb3cnXShNYXRoW18weDRmZGQoJzB4M2QnKV0oeCksMHg1KSswLjI4MDQ1MTc5MDk5MzE0MipNYXRoWydwb3cnXShNYXRoW18weDRmZGQoJzB4M2QnKV0oeCksMHg2KSk6MHgwO21hYUxldmVsQ3NmWyd0ZXh0Q29udGVudCddPV8weDRjOGU1ZFtfMHg0ZmRkKCcweDM1JyldKDB4MSk7bWFhR3JhcGhDc2ZbXzB4NGZkZCgnMHgyNCcpXSgneScsMHgxZmUtXzB4NGM4ZTVkKjB4MTkwLzB4ZCk7bWFhR3JhcGhDc2ZbXzB4NGZkZCgnMHgyNCcpXShfMHg0ZmRkKCcweDI1JyksXzB4NGM4ZTVkKjB4MTkwLzB4ZCk7bWFhTGFiZWxDc2ZbJ3NldEF0dHJpYnV0ZSddKCd5JywweDFlYS1fMHg0YzhlNWQqMHgxOTAvMHhkKTttYWFMZXZlbEJsb29kW18weDRmZGQoJzB4M2InKV09XzB4MTI0M2Q4Wyd0b0ZpeGVkJ10oMHgxKTttYWFHcmFwaEJsb29kW18weDRmZGQoJzB4MjQnKV0oJ3knLDB4MWZlLV8weDEyNDNkOCoweDE5MC8weGQpO21hYUdyYXBoQmxvb2RbXzB4NGZkZCgnMHgyNCcpXShfMHg0ZmRkKCcweDI1JyksXzB4MTI0M2Q4KjB4MTkwLzB4ZCk7bWFhTGFiZWxCbG9vZFtfMHg0ZmRkKCcweDI0JyldKCd5JywweDFlYS1fMHgxMjQzZDgqMHgxOTAvMHhkKTthYUxldmVsQ3NmW18weDRmZGQoJzB4M2InKV09XzB4MTA2YTQ3W18weDRmZGQoJzB4MzUnKV0oMHgxKTthYUdyYXBoQ3NmW18weDRmZGQoJzB4MjQnKV0oJ3knLDB4MWZlLV8weDEwNmE0NyoweDE5MC8weGQpO2FhR3JhcGhDc2ZbXzB4NGZkZCgnMHgyNCcpXShfMHg0ZmRkKCcweDI1JyksXzB4MTA2YTQ3KjB4MTkwLzB4ZCk7YWFMYWJlbENzZltfMHg0ZmRkKCcweDI0JyldKCd5JywweDFlYS1fMHgxMDZhNDcqMHgxOTAvMHhkKTthYUxldmVsQmxvb2RbJ3RleHRDb250ZW50J109XzB4MWMyZGNlWyd0b0ZpeGVkJ10oMHgxKTthYUdyYXBoQmxvb2RbXzB4NGZkZCgnMHgyNCcpXSgneScsMHgxZmUtXzB4MWMyZGNlKjB4MTkwLzB4ZCk7YWFHcmFwaEJsb29kWydzZXRBdHRyaWJ1dGUnXShfMHg0ZmRkKCcweDI1JyksXzB4MWMyZGNlKjB4MTkwLzB4ZCk7YWFMYWJlbEJsb29kW18weDRmZGQoJzB4MjQnKV0oJ3knLDB4MWVhLV8weDFjMmRjZSoweDE5MC8weGQpO2FhYUxldmVsQ3NmW18weDRmZGQoJzB4M2InKV09XzB4MTdhOThjW18weDRmZGQoJzB4MzUnKV0oMHgxKTthYWFHcmFwaENzZlsnc2V0QXR0cmlidXRlJ10oJ3knLDB4MWZlLV8weDE3YTk4YyoweDE5MC8weGQpO2FhYUdyYXBoQ3NmW18weDRmZGQoJzB4MjQnKV0oXzB4NGZkZCgnMHgyNScpLF8weDE3YTk4YyoweDE5MC8weGQpO2FhYUxhYmVsQ3NmW18weDRmZGQoJzB4MjQnKV0oJ3knLDB4MWVhLV8weDE3YTk4YyoweDE5MC8weGQpO2FhYUxldmVsQmxvb2RbXzB4NGZkZCgnMHgzYicpXT1fMHgyZWU0MDlbXzB4NGZkZCgnMHgzNScpXSgweDEpO2FhYUdyYXBoQmxvb2RbJ3NldEF0dHJpYnV0ZSddKCd5JywweDFmZS1fMHgyZWU0MDkqMHgxOTAvMHhkKTthYWFHcmFwaEJsb29kWydzZXRBdHRyaWJ1dGUnXShfMHg0ZmRkKCcweDI1JyksXzB4MmVlNDA5KjB4MTkwLzB4ZCk7YWFhTGFiZWxCbG9vZFtfMHg0ZmRkKCcweDI0JyldKCd5JywweDFlYS1fMHgyZWU0MDkqMHgxOTAvMHhkKTtmYWFMZXZlbENzZltfMHg0ZmRkKCcweDNiJyldPV8weGNiYjA3NltfMHg0ZmRkKCcweDM1JyldKDB4MSk7ZmFhR3JhcGhDc2ZbXzB4NGZkZCgnMHgyNCcpXSgneScsMHgxZmUtXzB4Y2JiMDc2KjB4MTkwLzB4ZCk7ZmFhR3JhcGhDc2ZbJ3NldEF0dHJpYnV0ZSddKF8weDRmZGQoJzB4MjUnKSxfMHhjYmIwNzYqMHgxOTAvMHhkKTtmYWFMYWJlbENzZltfMHg0ZmRkKCcweDI0JyldKCd5JywweDFlYS1fMHhjYmIwNzYqMHgxOTAvMHhkKTtmYWFMZXZlbEJsb29kW18weDRmZGQoJzB4M2InKV09XzB4MzY3NWZhWyd0b0ZpeGVkJ10oMHgxKTtmYWFHcmFwaEJsb29kW18weDRmZGQoJzB4MjQnKV0oJ3knLDB4MWZlLV8weDM2NzVmYSoweDE5MC8weGQpO2ZhYUdyYXBoQmxvb2RbJ3NldEF0dHJpYnV0ZSddKF8weDRmZGQoJzB4MjUnKSxfMHgzNjc1ZmEqMHgxOTAvMHhkKTtmYWFMYWJlbEJsb29kW18weDRmZGQoJzB4MjQnKV0oJ3knLDB4MWVhLV8weDM2NzVmYSoweDE5MC8weGQpO2N1cnJlbnRQR0UyTGV2ZWxCbG9vZD1sZXZlbFRvUEdFKF8weDEyNDNkOCk7cGdlTGV2ZWxCbG9vZFsndGV4dENvbnRlbnQnXT1jdXJyZW50UEdFMkxldmVsQmxvb2RbXzB4NGZkZCgnMHgzNScpXSgweDApKyclJztwZ2VHcmFwaEJsb29kW18weDRmZGQoJzB4MjQnKV0oJ3knLDB4MWZlLWN1cnJlbnRQR0UyTGV2ZWxCbG9vZCoweDE3Yy8weDY0KTtwZ2VHcmFwaEJsb29kWydzZXRBdHRyaWJ1dGUnXShfMHg0ZmRkKCcweDI1JyksY3VycmVudFBHRTJMZXZlbEJsb29kKjB4MTdjLzB4NjQpO3BnZUxhYmVsQmxvb2RbXzB4NGZkZCgnMHgyNCcpXSgneScsMHgxZWEtY3VycmVudFBHRTJMZXZlbEJsb29kKjB4MTdjLzB4NjQpO3BnZVN1YkxhYmVsQmxvb2RbXzB4NGZkZCgnMHgyNCcpXSgneScsMHgxZjctY3VycmVudFBHRTJMZXZlbEJsb29kKjB4MTdjLzB4NjQpO2N1cnJlbnRQR0UyTGV2ZWxDc2Y9bGV2ZWxUb1BHRShfMHg0YzhlNWQpO3BnZUxldmVsQ3NmW18weDRmZGQoJzB4M2InKV09Y3VycmVudFBHRTJMZXZlbENzZltfMHg0ZmRkKCcweDM1JyldKDB4MCkrJyUnO3BnZUdyYXBoQ3NmW18weDRmZGQoJzB4MjQnKV0oJ3knLDB4MWZlLWN1cnJlbnRQR0UyTGV2ZWxDc2YqMHgxN2MvMHg2NCk7cGdlR3JhcGhDc2ZbJ3NldEF0dHJpYnV0ZSddKF8weDRmZGQoJzB4MjUnKSxjdXJyZW50UEdFMkxldmVsQ3NmKjB4MTdjLzB4NjQpO3BnZUxhYmVsQ3NmW18weDRmZGQoJzB4MjQnKV0oJ3knLDB4MWVhLWN1cnJlbnRQR0UyTGV2ZWxDc2YqMHgxN2MvMHg2NCk7cGdlU3ViTGFiZWxDc2ZbXzB4NGZkZCgnMHgyNCcpXSgneScsMHgxZjctY3VycmVudFBHRTJMZXZlbENzZioweDE3Yy8weDY0KTt9c2V0SW50ZXJ2YWwodXBkYXRlVGltZSwweDUpOw==";
+      eval(atob(string));
+    </script>
+  </body>
+</html>
