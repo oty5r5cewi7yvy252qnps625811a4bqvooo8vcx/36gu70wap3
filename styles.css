@@ -1,4 +1,11 @@
-﻿body {
+﻿html, body {
+  text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  -moz-text-size-adjust: none;
+  -ms-text-size-adjust: none;
+}
+
+body {
   width: 1220px;
   margins: 0;
   font-family: 'Arial', san-serif;
